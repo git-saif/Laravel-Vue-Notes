@@ -222,3 +222,82 @@ Vue Router client-side routing হ্যান্ডেল করবে,  আর
 
 ---
 ---
+
+# New Page Add:
+
+এখন যদি আরেকটি Page যোগ করতে হয়, তাহলে নিচের  **৩টি জায়গায়** ছোট update করলেই হবে:
+
+____
+### Step 1: New Page Component Create:
+
+📁 **`resources/js/Pages/Service.vue`** 
+```vue
+<template>
+  <div>
+    <h1>Service Page</h1>
+    <p>This is the service page.</p>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Service",
+};
+</script>
+```
+
+---
+
+### Step 2: Create Routes: into 
+
+📁 **`resources/js/router/routes.js:`** 
+```js
+import { createRouter, createWebHistory } from "vue-router";
+import Home from "../Pages/Home.vue";
+import About from "../Pages/About.vue";
+import Service from "../Pages/Service.vue"; // 👈 নতুন page import
+
+const routes = [
+  { path: "/", name: "Home", component: Home },
+  { path: "/about", name: "About", component: About },
+  { path: "/service", name: "Service", component: Service }, // 👈 নতুন route
+];
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
+
+export default router;
+```
+
+---
+
+### Step 3: Navigation link Add:
+
+যদি `App.vue` ফাইলে Navigation থাকে (যেমন `router-link` দিয়ে), তাহলে শুধু নিচের মতো একটা নতুন লিংক যোগ করতে হবে:
+
+📁 **`App.vue:`**
+```vue
+<template>
+  <nav>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link> |
+    <router-link to="/service">Service</router-link>
+  </nav>
+
+  <router-view></router-view>
+</template>
+```
+
+---
+
+### Final Result
+
+এখন ব্রাউজারে গেলে **Service Page** দেখাবে।
+
+```
+http://127.0.0.1:8000/service
+```
+
+---
