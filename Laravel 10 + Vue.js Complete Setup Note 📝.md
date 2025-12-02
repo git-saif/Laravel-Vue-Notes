@@ -23,10 +23,10 @@ php artisan migrate
 
 ---
 
-## **2. Vue.js Install**
+## **2. `Vue.js` Install**
 
 
-**Step 1:** Vue + Vite plugin ইনস্টল করা।
+**Step 1:** `Vue` + `Vite` plugin ইনস্টল করা।
 
 ```bash
 npm install vue@latest @vitejs/plugin-vue
@@ -35,9 +35,9 @@ npm install vue@latest @vitejs/plugin-vue
 > Laravel + Vue.js এর জন্য Node.js লাগবে।
 ---
 
-## **3. Vite Config করা**
+## **3. `Vite` Config করা**
 
-`vite.config.js` এ Vue plugin যুক্ত করো:
+`vite.config.js` এ `Vue` plugin যুক্ত করো:
 
 ```js
 import { defineConfig } from 'vite';

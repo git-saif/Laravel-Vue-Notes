@@ -3,11 +3,11 @@ Laravel + Vue Project এ Route setup এর জন্য ৬টি স্টে
 1. Vue Router install করা। 
 2. **`resources/js/router/index.js`** তে Route create করা।
 3. View Page **(`Home.vue`, `About.vue`)** Create করা। 
-4. Vue root component Create করা। 
-5. app.js (root) Update করা।
+4. `Vue` root component Create করা। 
+5. `app.js `(root) Update করা।
 6. Blade File Create করা।
 
-## **1. Vue Router Install:**
+## **1. `Vue` Router Install:**
 
 **`Terminal:`**
 ```bash
